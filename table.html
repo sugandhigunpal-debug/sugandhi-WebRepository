@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Square Cube Table</title>
+</head>
+
+<body>
+  <table border="1">
+    <tr>
+      <th>Number</th>
+      <th>Square</th>
+      <th>Cube</th>
+    </tr>
+  </table>
+
+  <script>
+    let myTable = document.querySelector('table');
+
+    for (let i = 1; i < 21; i++) {
+      
+      let row = document.createElement('tr');
+
+      
+      let td1 = document.createElement('td');
+      let td2 = document.createElement('td');
+      let td3 = document.createElement('td');
+      td1.innerText = i;
+      td2.innerText = i * i;
+      td3.innerText = i * i * i;
+
+      row.appendChild(td1);
+      row.appendChild(td2);
+      row.appendChild(td3)
+      myTable.appendChild(row);
+    }
+  </script>
+</body>
+</html>
